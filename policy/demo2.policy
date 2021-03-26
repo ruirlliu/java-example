@@ -1,0 +1,9 @@
+grant codeBase "file:${user.dir}/-" {
+    permission java.io.FilePermission "c:/abcsys/","read,write";
+};
+
+grant {
+    permission java.io.FilePermission "C:/boc/", "read";
+    permission java.io.FilePermission "C:/boc/*", "read";
+    permission java.io.FilePermission "C:/Programs/JetBrains/IntelliJ IDEA 2020.1/bin/breakgen64.dll", "read";
+};

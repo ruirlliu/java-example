@@ -1,0 +1,8 @@
+grant codeBase "file:C:/IDEAWorkspace/ideaworkspace/java-se-demo/policy/*"  {
+    permission java.io.FilePermission "C:/abcsys", "read";
+};
+
+grant {
+    permission java.io.FilePermission "C:/boc", "read";
+    permission java.io.FilePermission "C:/Programs/JetBrains/IntelliJ IDEA 2020.1/bin/breakgen64.dll", "read";
+};
