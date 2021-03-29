@@ -4,7 +4,7 @@ import java.util.BitSet;
 import java.util.Random;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/11/2
  */
 public class BitSetDemo {

@@ -3,7 +3,7 @@ package com.harbor.client.v1;
 import com.harbor.client.v1.op.Projects;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/2/5
  */
 public interface HarborClientV1 {

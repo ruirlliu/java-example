@@ -24,7 +24,7 @@ import java.util.Set;
 import java.util.function.Predicate;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/11/24
  */
 public class KafkaDemo {

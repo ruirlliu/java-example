@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/2/5
  */
 public class Projects {

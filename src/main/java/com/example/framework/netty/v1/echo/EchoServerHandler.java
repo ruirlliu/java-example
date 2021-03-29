@@ -8,7 +8,7 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * DISCARD协议,是一种丢弃了所有接受到的数据，并不做有任何的响应的协议。
- * @author liurui
+ * @author lr
  * @date 2021/1/25
  */
 public class EchoServerHandler extends ChannelInboundHandlerAdapter {

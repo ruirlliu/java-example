@@ -7,7 +7,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2019/8/19
  */
 public class DefaultThreadPoolTest {

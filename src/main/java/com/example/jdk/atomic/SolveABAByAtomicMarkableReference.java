@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicMarkableReference;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/10/27
  */
 public class SolveABAByAtomicMarkableReference {

@@ -1,7 +1,7 @@
 package com.example.jdk.jvm;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/1/28
  */
 public class ShutDownHook {

@@ -7,7 +7,7 @@ import java.io.PipedReader;
 import java.io.PipedWriter;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2019/7/12 16:10
  */
 public class pipe {

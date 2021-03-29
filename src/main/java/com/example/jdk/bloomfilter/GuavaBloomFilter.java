@@ -4,7 +4,7 @@ import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnels;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/11/4
  */
 public class GuavaBloomFilter {

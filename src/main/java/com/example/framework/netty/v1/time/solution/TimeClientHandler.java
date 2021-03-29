@@ -7,7 +7,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import java.util.Date;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/1/28
  */
 public class TimeClientHandler extends ChannelInboundHandlerAdapter {

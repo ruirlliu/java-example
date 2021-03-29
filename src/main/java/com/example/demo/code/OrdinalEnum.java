@@ -1,7 +1,7 @@
 package com.example.demo.code;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/1/25
  */
 public enum OrdinalEnum {

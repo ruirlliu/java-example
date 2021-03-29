@@ -29,7 +29,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/12/9
  */
 @ServerEndpoint(value = "/test/dp/{num}")

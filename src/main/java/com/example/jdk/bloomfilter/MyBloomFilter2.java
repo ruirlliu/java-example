@@ -3,7 +3,7 @@ package com.example.jdk.bloomfilter;
 import java.util.BitSet;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/11/4
  */
 public class MyBloomFilter2 {

@@ -1,7 +1,7 @@
 package com.harbor.client.v1.flag;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/2/22
  */
 public enum ResponseConfigure {

@@ -3,7 +3,7 @@ package com.harbor.client.v2;
 import org.apache.http.impl.client.CloseableHttpClient;
 import com.harbor.client.v2.operation.ProjectOp;
 /**
- * @author liurui
+ * @author lr
  * @date 2021/2/4
  */
 public interface HarborClient {

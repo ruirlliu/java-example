@@ -2,7 +2,7 @@ package com.example.demo.suanfa;
 
 /**
  * 查找字符串
- * @author liurui
+ * @author lr
  * @date 2020/11/6
  */
 public class StrIndex {

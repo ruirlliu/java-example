@@ -11,7 +11,7 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/12/8
  */
 @ServerEndpoint(value = "/test")

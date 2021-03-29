@@ -6,7 +6,7 @@ import io.netty.channel.ChannelOutboundHandlerAdapter;
 import io.netty.channel.ChannelPromise;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/1/28
  */
 public class PojoTimeEncoder extends ChannelOutboundHandlerAdapter {

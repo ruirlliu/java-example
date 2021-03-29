@@ -1,7 +1,7 @@
 package com.example.jdk.concurrent;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/9/18
  */
 public class ThreadJoinTest {

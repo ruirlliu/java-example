@@ -3,7 +3,7 @@ package com.example.jdk.atomic;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/10/27
  */
 public class AtomicIntegerDefectDemo {

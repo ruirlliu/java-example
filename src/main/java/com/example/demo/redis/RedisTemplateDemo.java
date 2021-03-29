@@ -4,7 +4,7 @@ import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactor
 import org.springframework.data.redis.core.RedisTemplate;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/11/12
  */
 public class RedisTemplateDemo {

@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/12/8
  */
 @ServerEndpoint("/webshell1/namespaces/{namespace}/pods/{pod}/containers/{container}/terminal")

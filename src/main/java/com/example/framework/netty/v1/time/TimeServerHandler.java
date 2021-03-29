@@ -9,7 +9,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 /**
  * 不接受任何请求时他会发送一个含32位的整数的消息，并且一旦消息发送就会立即关闭连接
  * 将会忽略任何接收到的数据，而只是在连接被创建发送一个消息
- * @author liurui
+ * @author lr
  * @date 2021/1/26
  */
 public class TimeServerHandler extends ChannelInboundHandlerAdapter {

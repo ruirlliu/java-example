@@ -9,7 +9,7 @@ import java.util.function.Function;
 
 /**
  * 相当于mysql的group by功能
- * @author liurui
+ * @author lr
  * @date 2021/2/23
  */
 public class GroupByUtil {
@@ -37,8 +37,12 @@ public class GroupByUtil {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             GroupKey key = (GroupKey) o;
             return Arrays.equals(condition, key.condition);
         }

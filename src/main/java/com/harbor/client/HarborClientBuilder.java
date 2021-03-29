@@ -13,7 +13,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/2/4
  */
 public class HarborClientBuilder {

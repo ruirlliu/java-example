@@ -4,7 +4,7 @@ import io.netty.channel.epoll.Epoll;
 import io.netty.channel.epoll.Native;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/1/29
  */
 public class EpollDemo {

@@ -6,7 +6,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/1/28
  */
 public class PojoTimeServerHandler extends ChannelInboundHandlerAdapter {

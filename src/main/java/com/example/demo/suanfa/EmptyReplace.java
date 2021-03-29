@@ -2,7 +2,7 @@ package com.example.demo.suanfa;
 
 /**
  * 替换空格
- * @author liurui
+ * @author lr
  * @date 2020/11/9
  */
 public class EmptyReplace {

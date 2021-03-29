@@ -16,7 +16,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/2/1
  */
 public class HttpRequestHandler extends SimpleChannelInboundHandler<FullHttpRequest> {

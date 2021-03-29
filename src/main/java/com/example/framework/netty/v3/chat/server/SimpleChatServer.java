@@ -8,7 +8,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/2/1
  */
 public class SimpleChatServer {

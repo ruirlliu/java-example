@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2019/7/10 9:44
  */
 @Data

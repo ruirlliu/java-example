@@ -3,7 +3,7 @@ package com.example.jdk.datetime;
 import java.time.ZoneId;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/10/30
  */
 public class ZoneIdDemo {

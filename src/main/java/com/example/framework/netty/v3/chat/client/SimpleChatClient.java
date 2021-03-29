@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/2/1
  */
 public class SimpleChatClient {

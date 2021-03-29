@@ -10,7 +10,7 @@ import java.security.PrivilegedAction;
 import java.util.List;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/1/26
  */
 public class FilePermissionDemo {

@@ -6,7 +6,7 @@ import org.apache.commons.lang3.arch.Processor;
 import java.util.Properties;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/12/2
  */
 public class Demo {

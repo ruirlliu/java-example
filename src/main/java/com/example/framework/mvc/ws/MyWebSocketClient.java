@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import java.net.URI;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/12/10
  */
 public class MyWebSocketClient extends WebSocketClient {

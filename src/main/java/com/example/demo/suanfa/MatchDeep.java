@@ -8,7 +8,7 @@ package com.example.demo.suanfa;
  * 如果"X"是一个合法的括号匹配序列,那么"(X)"也是一个合法的括号匹配序列
  * 每个合法的括号序列都可以由以上规则生成。
  *
- * @author liurui
+ * @author lr
  * @date 2020/11/9
  */
 public class MatchDeep {

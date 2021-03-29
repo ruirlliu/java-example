@@ -11,7 +11,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2019/7/10 17:58
  */
 public class ThreadUtils {

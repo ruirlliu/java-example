@@ -7,7 +7,7 @@ package com.example.demo.suanfa;
  * 要求不能使用字符串转换整数的库函数。 数值为0或者字符串不是一个合法的数值则返回0。
  *
  *
- * @author liurui
+ * @author lr
  * @date 2020/11/9
  */
 public class StrToInt {

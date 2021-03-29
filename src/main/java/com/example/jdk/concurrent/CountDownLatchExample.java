@@ -4,7 +4,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2019/8/22
  */
 public class CountDownLatchExample {

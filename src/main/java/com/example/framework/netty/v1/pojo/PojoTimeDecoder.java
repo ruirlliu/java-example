@@ -7,7 +7,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 import java.util.List;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/1/28
  */
 public class PojoTimeDecoder extends ByteToMessageDecoder {

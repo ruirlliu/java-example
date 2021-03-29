@@ -12,7 +12,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/12/7
  */
 public class ServiceCenter implements Server {

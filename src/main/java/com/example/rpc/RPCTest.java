@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/12/7
  */
 public class RPCTest {

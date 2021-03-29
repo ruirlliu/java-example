@@ -10,7 +10,7 @@ import java.security.PrivilegedActionException;
 import java.util.PropertyPermission;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/1/25
  */
 public class PermissionDemo {

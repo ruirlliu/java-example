@@ -9,12 +9,16 @@ import java.lang.ref.WeakReference;
 /**
  * 当我们想检测一个对象是否被回收了，那么我们就可以采用 Reference1 + ReferenceQueue，大概需要几个步骤：
  * 1 创建一个引用队列 queue
- * 2 创建 Reference1 对象，并关联引用队列 queue
- * 3 在 reference 被回收的时候，Reference1 会被添加到 queue 中
+ * 2 创建 Reference 对象，并关联引用队列 queue
+ * 3 在 reference 被回收的时候，Reference 会被添加到 queue 中
+ *
+ * 总结: Reference 和引用队列 ReferenceQueue 联合使用时，如果 Reference 持有的对象被垃圾回收，Java 虚拟机就会把这个弱引用加入到与之关联的引用队列中。
+ *
+ * 通过添加 vm 参数 -XX:+PrintGCTimeStamps -XX:+PrintGCDetails
  */
 public class ReferenceQueueTest {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args)  {
 
 
         /*
@@ -33,12 +37,14 @@ public class ReferenceQueueTest {
         // 创建一个引用队列
         ReferenceQueue<Object> queue = new ReferenceQueue<>();
         /*
-        引用类型 | 取得目标对象方式	 | 垃圾回收条件  | 是否可能内存泄漏
-        强引用   | 直接调用	     | 不回收	   | 可能
-        软引用	|                |视内存情况回收 | 不可能
-        弱引用	| 通过get()方法	 | 永远回收	   | 不可能
-        虚引用	| 无法取得	     | 不回收	   | 可能
+        引用类型 | 被回收时间    |  取得目标对象方式	| 垃圾回收条件   | 是否可能内存泄漏  | 用途
+        强引用   | 从来不会      |  直接调用	    | 不回收	       | 可能            | 对象的一般状态
+        软引用	| 内存不足时    |                | 视内存情况回收  | 不可能          | 对象缓存
+        弱引用	| jvm垃圾回收时 | 通过get()方法	| 永远回收	   | 不可能          | 对象缓存
+        虚引用	| 未知         | 无法取得	        | 不回收	       | 可能            | 未知
          */
+
+
 
 //        System.out.println("soft.....");
 //        soft(queue);
@@ -48,6 +54,8 @@ public class ReferenceQueueTest {
         phantom(queue);
 
     }
+
+
 
 
     /**
@@ -79,9 +87,8 @@ public class ReferenceQueueTest {
      * 此时无论如何也不会进行垃圾回收。当执行了obj = null.Object 对象就只具有弱引用，并且我们进行了显示的垃圾回收。因此此具有弱引用的对象就被GC给回收了。
      *
      * @param queue
-     * @throws InterruptedException
      */
-    static void weak(ReferenceQueue<Object> queue) throws InterruptedException {
+    static void weak(ReferenceQueue<Object> queue) {
         // 创建弱引用，此时状态为Active，并且Reference.pending为空，当前Reference.queue = 上面创建的queue，并且next=null
         Object obj = new Object();
         WeakReference<Object> reference = new WeakReference<>(obj, queue);
@@ -109,6 +116,14 @@ public class ReferenceQueueTest {
      * 注意：PhantomReference必须要和ReferenceQueue联合使用，SoftReference和WeakReference可以选择和ReferenceQueue联合使用也可以不选择，这使他们的区别之一。
      *
      * 运行结果:null null 回收
+     *
+     * 根据例子有两点需要说明：
+     *
+     * 1 PhantomReference的get方法无论在上面情况下都是返回null。这个在PhantomReference源码中可以看到。
+     *
+     * 2 在代码中，如果obj被置为null，当GC发现虚引用，GC会将把 PhantomReference 对象pr加入到队列ReferenceQueue中，
+     * 注意此时pr所指向的对象并没有被回收，在我们现实的调用了 rq.poll() 返回 Reference 对象之后当GC第二次发现虚引用，而此时 JVM 将虚引用pr插入到队列 rq 会插入失败，此时 GC 才会对虚引用对象进行回收。
+     *
      * @param queue
      */
     static void phantom(ReferenceQueue<Object> queue) {

@@ -1,7 +1,7 @@
 package com.harbor.client.v2.utils;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/2/5
  */
 public class HttpUtils {

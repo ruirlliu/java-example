@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/1/28
  */
 public class MyFuture<R> implements Future<R> {

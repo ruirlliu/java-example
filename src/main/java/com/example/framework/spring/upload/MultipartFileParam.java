@@ -8,7 +8,7 @@ import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/11/23
  */
 @Data

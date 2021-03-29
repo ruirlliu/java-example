@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 输入: ["flower","flow","flight"]
  * 输出: "fl"
  *
- * @author liurui
+ * @author lr
  * @date 2020/11/9
  */
 public class LongPrefix {

@@ -12,7 +12,7 @@ import javax.websocket.Session;
 import java.io.IOException;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/12/9
  */
 @ClientEndpoint

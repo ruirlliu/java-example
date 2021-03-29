@@ -2,7 +2,7 @@ package com.example.demo.suanfa;
 
 /**
  * 进制转换：十进制 转 二进制
- * @author liuruiZ
+ * @author lrZ
  * @date 2020/11/2
  */
 public class JinZhiZhuanHuan {

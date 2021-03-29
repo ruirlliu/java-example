@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.Properties;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/11/25
  */
 public class KafkaStreamDemo {

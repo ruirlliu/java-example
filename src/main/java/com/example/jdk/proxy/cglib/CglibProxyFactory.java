@@ -3,7 +3,7 @@ package com.example.jdk.proxy.cglib;
 import net.sf.cglib.proxy.Enhancer;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/11/3
  */
 public class CglibProxyFactory {

@@ -1,7 +1,7 @@
 package com.example.jdk.proxy.cglib;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/11/3
  */
 public class SmsService {

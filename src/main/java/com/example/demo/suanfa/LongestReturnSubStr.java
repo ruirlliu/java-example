@@ -2,7 +2,7 @@ package com.example.demo.suanfa;
 
 /**
  * 最长回文子串
- * @author liurui
+ * @author lr
  * @date 2020/11/9
  */
 public class LongestReturnSubStr {

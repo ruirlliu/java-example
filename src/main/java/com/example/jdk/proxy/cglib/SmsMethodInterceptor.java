@@ -6,7 +6,7 @@ import net.sf.cglib.proxy.MethodProxy;
 import java.lang.reflect.Method;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/11/3
  */
 public class SmsMethodInterceptor implements MethodInterceptor {

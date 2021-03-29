@@ -6,7 +6,7 @@ import io.netty.buffer.Unpooled;
 import java.nio.ByteBuffer;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/1/28
  */
 public class BufferDemo {

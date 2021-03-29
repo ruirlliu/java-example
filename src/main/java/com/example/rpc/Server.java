@@ -3,7 +3,7 @@ package com.example.rpc;
 import java.io.IOException;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/12/7
  */
 public interface Server {

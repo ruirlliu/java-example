@@ -9,7 +9,7 @@ import io.netty.util.concurrent.GlobalEventExecutor;
 
 /**
  * handler 是 Netty 生成用来处理 I/O 事件的
- * @author liurui
+ * @author lr
  * @date 2021/2/1
  */
 public class SimpleChatServerHandler extends SimpleChannelInboundHandler<String> {

@@ -7,7 +7,7 @@ import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/12/10
  */
 @Component

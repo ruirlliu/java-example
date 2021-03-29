@@ -4,7 +4,7 @@ import java.util.BitSet;
 import java.util.Objects;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/11/4
  */
 public class MyBloomFilterDemo {

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/9/18
  */
 public class StreamTest {

@@ -3,7 +3,7 @@ package com.example.jdk.map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/9/16
  */
 public class ConcurrentHashMapTest {

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2020/10/30
  */
 public class ScannerDemo {

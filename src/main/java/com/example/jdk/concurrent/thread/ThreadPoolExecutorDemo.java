@@ -3,7 +3,7 @@ package com.example.jdk.concurrent.thread;
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/2/2
  */
 public class ThreadPoolExecutorDemo {
