@@ -1,8 +1,8 @@
 package com.mybatis;
 
-import com.example.DemoApplication;
-import com.example.framework.mybatis.dao.TestDao;
-import com.example.framework.mybatis.entity.Human;
+import example.DemoApplication;
+import example.framework.mybatis.dao.TestDao;
+import example.framework.mybatis.entity.Human;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

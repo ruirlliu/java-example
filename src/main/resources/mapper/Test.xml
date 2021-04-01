@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.mybatis.dao.TestDao" >
-    <resultMap id="BaseResultMap" type="com.example.framework.mybatis.entity.Human">
+<mapper namespace="example.mybatis.dao.TestDao" >
+    <resultMap id="BaseResultMap" type="example.framework.mybatis.entity.Human">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="age" property="age" />
@@ -18,7 +18,7 @@
 
     <!--flushCache: false , 去掉一级缓存，
      useCache: false 这个查询不使用二级缓存 -->
-<cache-ref namespace="com.example.framework.mybatis.dao.TestDao"/>
+<cache-ref namespace="example.framework.mybatis.dao.TestDao"/>
      <cache eviction="org.apache.ibatis.cache.decorators.LruCache" readOnly="true" blocking="false" />
     <!-- 开启二级缓存  readOnly 设为true，标识只读缓存，不需要序列化， false是写缓存-->
 </mapper>

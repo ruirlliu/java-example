@@ -1,8 +1,7 @@
 package com;
 
-import com.example.DemoApplication;
-import com.example.framework.mybatis.dao.TestDao;
-import com.example.framework.spring.AwareComponent;
+import example.DemoApplication;
+import example.framework.mybatis.dao.TestDao;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
@@ -10,16 +9,12 @@ import org.junit.runner.RunWith;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.mapper.MapperFactoryBean;
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigurationPackages;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.lang.reflect.Field;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -78,21 +73,21 @@ public class BeanTest {
 
     @Test
     public void testAware() {
-        BeanFactory beanFactory = AwareComponent.getBeanFactory();
-        String beanName = AwareComponent.getBeanName();
-        System.out.println(beanFactory);
-        System.out.println(beanFactory.getClass().getName());
-        System.out.println(beanName);
+//        BeanFactory beanFactory = AwareComponent.getBeanFactory();
+//        String beanName = AwareComponent.getBeanName();
+//        System.out.println(beanFactory);
+//        System.out.println(beanFactory.getClass().getName());
+//        System.out.println(beanName);
 
-        ObjectProvider<System> beanProvider = beanFactory.getBeanProvider(System.class);
-        System.out.println(beanProvider.getIfAvailable());
-
-        ObjectProvider<System> beanProvider1 = beanFactory.getBeanProvider(System.class);
-
-        List<String> strings = AutoConfigurationPackages.get(beanFactory);
-        System.out.println(strings);
-        boolean has = AutoConfigurationPackages.has(beanFactory);
-        System.out.println(has);
+//        ObjectProvider<System> beanProvider = beanFactory.getBeanProvider(System.class);
+//        System.out.println(beanProvider.getIfAvailable());
+//
+//        ObjectProvider<System> beanProvider1 = beanFactory.getBeanProvider(System.class);
+//
+//        List<String> strings = AutoConfigurationPackages.get(beanFactory);
+//        System.out.println(strings);
+//        boolean has = AutoConfigurationPackages.has(beanFactory);
+//        System.out.println(has);
     }
 
 }

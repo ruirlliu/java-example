@@ -3,4 +3,4 @@ My Java Examples
 - `pattern` 关于设计模式
 - `middleware` 一些中间件和开源框架的使用 redis、kafka
 - `framework` 一些开源框架的使用 netty、spring、mybatis
-- `com.example.jdk.utils` 开源工具 apache lang3、hutool、guava
+- `example.jdk.utils` 开源工具 apache lang3、hutool、guava

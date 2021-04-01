@@ -1,6 +1,5 @@
 package com.mybatis;
 
-import com.github.pagehelper.PageInterceptor;
 import org.apache.ibatis.executor.SimpleExecutor;
 import org.apache.ibatis.plugin.Plugin;
 
@@ -15,7 +14,7 @@ public class PluginTest {
 
     public static void main(String[] args) throws NoSuchMethodException {
         SimpleExecutor executor = new SimpleExecutor(null, null);
-        Object wrap = Plugin.wrap(executor, new PageInterceptor());
+        Object wrap = Plugin.wrap(executor, null); //new PageInterceptor());
         System.out.println(wrap.getClass());
 
         Method test = PluginTest.class.getMethod("test", Integer.class, String.class);
