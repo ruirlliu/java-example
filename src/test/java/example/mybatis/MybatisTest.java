@@ -1,4 +1,4 @@
-package com.mybatis;
+package example.mybatis;
 
 import example.DemoApplication;
 import example.framework.mybatis.dao.TestDao;

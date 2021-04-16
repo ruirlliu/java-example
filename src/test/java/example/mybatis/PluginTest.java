@@ -1,4 +1,4 @@
-package com.mybatis;
+package example.mybatis;
 
 import org.apache.ibatis.executor.SimpleExecutor;
 import org.apache.ibatis.plugin.Plugin;

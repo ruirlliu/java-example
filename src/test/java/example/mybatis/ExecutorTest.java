@@ -1,6 +1,5 @@
-package com.mybatis;
+package example.mybatis;
 
-import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.executor.SimpleExecutor;
 
 /**

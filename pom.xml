@@ -17,15 +17,31 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <spring.cloud-version>2020.0.2</spring.cloud-version>
     </properties>
 
     <dependencies>
+
+        <!-- Spring Cloud Start -->
         <dependency>
-            <!-- jsoup HTML parser library @ https://jsoup.org/ -->
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-kubernetes-all</artifactId>
+            <version>1.1.8.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <!-- Spring Cloud End -->
+
+        <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
             <version>1.13.1</version>
+            <!--<scope>provided</scope>-->
         </dependency>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -89,24 +105,17 @@
         </dependency>
     <!-- websocket end -->
 
-    <!-- Dubbo start -->
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>2.7.8</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>2.7.8</version>
-        </dependency>
-    <!-- Dubbo end -->
 
     <!-- elasticsearch start -->
+
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>-->
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>elasticsearch-rest-high-level-client</artifactId>
-            <version>7.12.0</version>
+            <!--<version>7.12.0</version>-->
         </dependency>
     <!-- elasticsearch end -->
 
@@ -138,12 +147,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <!--<exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>-->
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -197,11 +200,19 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-
-
-
-
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 <!--    <build>-->
 <!--        <plugins>-->
