@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/4/22
  */
 public class SingletonReflect {

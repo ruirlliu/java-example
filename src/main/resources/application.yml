@@ -1,7 +1,7 @@
 server:
   port: 8888
-  servlet:
-    context-path: /test
+#  servlet:
+#    context-path: /test
 spring:
   application:
     name: demo-application
@@ -33,6 +33,7 @@ spring:
       maximum-pool-size: 15
       idle-timeout: 30000
 
+
   servlet:
     multipart:
       max-file-size: 1024MB
@@ -49,6 +50,7 @@ mybatis:
     cache-enabled: true # 二级缓存，默认开启。还需要在指定Mapper中开启cache 配置
   lazy-initialization: false
   mapper-default-scope:
+
 
 
 # dubbo
@@ -74,5 +76,24 @@ dubbo:
     timeout: 1000
     check: true         # 服务启动时检查被调用服务是否可用
     retries: 2          # 服务调用重试次数
+
+management:
+  endpoint:
+    health:
+      show-details: always
+    startup:
+      enabled: on
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  health:
+#    defaults:
+#      enabled: false
+    elasticsearch:
+      enabled: off
+    redis:
+      enabled: off
+
 
 

@@ -10,7 +10,7 @@ import java.io.OutputStream;
 import java.io.Serializable;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/4/23
  */
 public class SingletonSerialize {
