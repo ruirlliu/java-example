@@ -4,7 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/4/12
  */
 public class ClassThrowable {

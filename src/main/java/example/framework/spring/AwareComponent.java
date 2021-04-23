@@ -16,6 +16,8 @@ import org.springframework.stereotype.Component;
 @Order(Ordered.LOWEST_PRECEDENCE)
 public class AwareComponent implements BeanNameAware, ApplicationContextAware {
 
+    public static final String ALIAS = "aware";
+
     private String beanName;
 
     private ApplicationContext context;

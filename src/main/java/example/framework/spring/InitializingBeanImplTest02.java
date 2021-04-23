@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/4/13
  */
 @Component

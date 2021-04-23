@@ -1,14 +1,14 @@
-package example.pattern.single;
+package example.pattern.singleton;
 
 import org.springframework.web.client.RestTemplate;
 
 /**
  * 单例模式的进化
  * http://www.voidcn.com/article/p-cljmhult-zg.html
- * @author liurui
+ * @author lr
  * @date 2021/4/14
  */
-public class SingleTest {
+public class EvolutionSingleton {
 
     // 1、饥饿模式，类初始化就创建对象，性能较低。
     public static class HungryModeSingle {
@@ -91,9 +91,10 @@ public class SingleTest {
     /**
      * 5、利用 volatile 关键字。
      * volatile 的语义
-     * 1、保证了不同线程对这个变量进行操作时的可见性，即一个线程修改了某个变量的值，这新值对其他线程来说是立即可见的。
-     * 2、禁止进行指令重排序。
+     *  1、保证了不同线程对这个变量进行操作时的可见性，即一个线程修改了某个变量的值，这新值对其他线程来说是立即可见的。
+     *  2、禁止进行指令重排序。(JDK1.5后)
      * https://www.cnblogs.com/igoodful/p/9473491.html
+     * happens-before 原则
      */
     public static class LazyDoubleCheckVolatileModeSingle {
 
@@ -120,6 +121,7 @@ public class SingleTest {
      * 基于这个特性，可以实现另一种线程安全的延迟初始化方案（这个方案被称之为Initialization On Demand Holder idiom）
      */
     public static class InstanceFactory {
+
         private static class InstanceHolder {
             public static RestTemplate instance = new RestTemplate();
         }

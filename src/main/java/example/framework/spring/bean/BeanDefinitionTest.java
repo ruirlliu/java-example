@@ -7,7 +7,7 @@ import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 
 /**
  * @see org.springframework.context.annotation.Bean
- * @author liurui
+ * @author lr
  * @date 2021/4/9
  */
 public class BeanDefinitionTest {

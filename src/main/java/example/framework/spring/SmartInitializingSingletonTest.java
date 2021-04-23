@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
- * @author liurui
+ * @author lr
  * @date 2021/4/13
  */
 @Component
