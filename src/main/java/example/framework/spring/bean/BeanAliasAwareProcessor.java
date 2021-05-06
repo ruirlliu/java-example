@@ -1,13 +1,14 @@
 package example.framework.spring.bean;
 
-import example.framework.spring.AwareComponent;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.stereotype.Component;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 注册别名
@@ -15,27 +16,25 @@ import org.springframework.stereotype.Component;
  * @date 2021/4/19
  */
 @Component
-public class BeanAlias implements BeanFactoryAware, BeanPostProcessor {
+@Slf4j
+public class BeanAliasAwareProcessor implements BeanFactoryAware, BeanPostProcessor {
 
     private ConfigurableListableBeanFactory beanFactory;
 
+    private final AtomicInteger integer = new AtomicInteger(0);
+
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        this.beanFactory = (ConfigurableListableBeanFactory)beanFactory;
+        if (beanFactory instanceof ConfigurableListableBeanFactory) {
+            this.beanFactory = (ConfigurableListableBeanFactory) beanFactory;
+        }
+        log.error("BeanFactory in ApplicationContext not support alias");
     }
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        if (bean instanceof AwareComponent) {
-            beanFactory.registerAlias(beanName, AwareComponent.ALIAS);
-        }
+        beanFactory.registerAlias(beanName, "xxxxx-" + integer.addAndGet(1));
         return bean;
     }
-
-    @Override
-    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        return BeanPostProcessor.super.postProcessAfterInitialization(bean, beanName);
-    }
-
 
 }

@@ -7,7 +7,7 @@ import java.util.List;
  * @author lr
  * @date 2021/3/11
  */
-public class ObserverPatternTest {
+public class TestObserverPattern {
 
     public static void main(String[] args) {
 

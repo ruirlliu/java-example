@@ -1,5 +1,6 @@
 package example.framework.spring;
 
+import example.framework.spring.aware.AliasAware;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
@@ -14,13 +15,13 @@ import org.springframework.stereotype.Component;
  */
 @Component("testAwareComponentName,m1,m2")
 @Order(Ordered.LOWEST_PRECEDENCE)
-public class AwareComponent implements BeanNameAware, ApplicationContextAware {
-
-    public static final String ALIAS = "aware";
+public class AwareComponent implements BeanNameAware, ApplicationContextAware, AliasAware {
 
     private String beanName;
 
     private ApplicationContext context;
+
+    private String[] alias;
 
     @Override
     public void setBeanName(String name) {
@@ -38,5 +39,14 @@ public class AwareComponent implements BeanNameAware, ApplicationContextAware {
 
     public ApplicationContext getContext() {
         return context;
+    }
+
+    @Override
+    public void setAlias(String[] alias) {
+        this.alias = alias;
+    }
+
+    public String[] getAlias() {
+        return alias;
     }
 }
