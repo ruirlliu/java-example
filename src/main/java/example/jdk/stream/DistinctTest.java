@@ -14,6 +14,7 @@ import java.util.ArrayList;
  */
 public class DistinctTest {
 
+    // stream distinct 需要重写hashcode 和 equals 方法，底层使用 LinkedHashSet 实现去重
     public static void main(String[] args) {
 
         ArrayList<BaseEntity> list = new ArrayList<>();

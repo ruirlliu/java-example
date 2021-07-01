@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class ConcreteSubject implements Subject{
 
-    private List<Observer> observers = new ArrayList<Observer>();
+    private final List<Observer> observers = new ArrayList<>();
 
 
     @Override

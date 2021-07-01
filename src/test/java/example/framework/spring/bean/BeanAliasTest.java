@@ -1,6 +1,6 @@
 package example.framework.spring.bean;
 
-import example.framework.spring.AwareComponent;
+import example.framework.spring.aware.AwareComponent;
 import example.framework.spring.controller.ValidateController;
 import org.junit.Test;
 import org.junit.runner.RunWith;

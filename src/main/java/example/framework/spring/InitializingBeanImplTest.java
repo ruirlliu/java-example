@@ -20,7 +20,7 @@ import javax.annotation.PostConstruct;
  */
 @Component
 @Order(Ordered.LOWEST_PRECEDENCE - 1000)
-@Scope(BeanDefinition.SCOPE_PROTOTYPE)
+//@Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class InitializingBeanImplTest implements InitializingBean {
 
     // 构造函数

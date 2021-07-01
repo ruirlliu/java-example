@@ -1,4 +1,4 @@
-package example.framework.spring;
+package example.framework.spring.aware;
 
 import example.framework.spring.aware.AliasAware;
 import org.springframework.beans.BeansException;

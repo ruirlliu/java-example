@@ -27,8 +27,9 @@ public class BeanAliasAwareProcessor implements BeanFactoryAware, BeanPostProces
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         if (beanFactory instanceof ConfigurableListableBeanFactory) {
             this.beanFactory = (ConfigurableListableBeanFactory) beanFactory;
+        } else {
+            log.error("BeanFactory in ApplicationContext not support alias");
         }
-        log.error("BeanFactory in ApplicationContext not support alias");
     }
 
     @Override
