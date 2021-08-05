@@ -1,4 +1,4 @@
-package example.jdk.mockJdk.collections;
+package example.jdk.mockjdk.collections;
 
 import java.util.Collection;
 import java.util.Iterator;

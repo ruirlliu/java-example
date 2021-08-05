@@ -11,7 +11,6 @@ import java.nio.file.Paths;
  * 描述:TOTO 请补全模块<br>
  *
  * @author LR<br>
- * @version 1.0 <br>
  * @date 2021/6/18 11:01
  */
 public class DownloadInfo {

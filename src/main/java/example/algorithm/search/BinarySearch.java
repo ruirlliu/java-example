@@ -11,7 +11,6 @@ import java.util.stream.IntStream;
  * 对于一个元素，list中已经存在相同排序顺序的元素。应该排在这些元素的后面
  *
  * @author LR<br>
- * @version 1.0 <br>
  * @date 2021/7/2 17:55
  */
 public class BinarySearch {

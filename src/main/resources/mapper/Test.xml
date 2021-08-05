@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="example.mybatis.dao.TestDao" >
+<mapper namespace="example.framework.mybatis.dao.TestDao" >
     <resultMap id="BaseResultMap" type="example.framework.mybatis.entity.Human">
         <id column="id" property="id" />
         <result column="name" property="name" />
@@ -14,6 +14,21 @@
     <select id="list"  resultMap="BaseResultMap" statementType="PREPARED" flushCache="true" useCache="false" >
         select id , name,age,address,gender,phone,email
         from human
+    </select>
+
+    <select id="listBy" resultMap="BaseResultMap">
+        select
+            id , name,age,address,gender,phone,email
+        from
+            human
+        <where>
+            <if test="id != null">
+                id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                `name` = #{name}
+            </if>
+        </where>
     </select>
 
     <!--flushCache: false , 去掉一级缓存，

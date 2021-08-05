@@ -1,16 +1,9 @@
-/**
- * 版权申明: 苏州朗动科技有限公司<br>
- * 项目描述: 企查查云聚接口平台
- */
-
 package example.demo.code;
 
 
 /**
- * 描述:TOTO 请补全模块<br>
  *
  * @author LR<br>
- * @version 1.0 <br>
  * @date 2021/7/2 15:58
  */
 public enum Enums {
