@@ -10,7 +10,7 @@ import java.util.List;
  * @date 2021/3/16
  */
 
-public interface TestDao {
+public interface HumanDao {
 
 //    @Select("select * from human")
     // 不能和xml重复出现，否则会报错，configuration类中 mappedStatements 变量
@@ -32,5 +32,25 @@ public interface TestDao {
     // 两个参数，可运行过滤查询
     List<Human> listBy(@Param("id") Integer id, @Param("name") String name);
     // Mybatis Dao 层方法重载 end
+
+
+
+
+
+
+
+
+
+    int deleteByPrimaryKey(Integer id);
+
+    int insert(Human record);
+
+    int insertSelective(Human record);
+
+    Human selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(Human record);
+
+    int updateByPrimaryKey(Human record);
 
 }

@@ -33,10 +33,10 @@ public class LinkedHashMapTest {
         }
 
         Map<Test, String> map1 = new HashMap<>();
-//        map1.put(new Test(0), "0");
-//        map1.put(new Test(1), "1");
-//        map1.put(new Test(2), "2");
-//        map1.put(new Test(3), "3");
+//        map1.put(new TestSpring(0), "0");
+//        map1.put(new TestSpring(1), "1");
+//        map1.put(new TestSpring(2), "2");
+//        map1.put(new TestSpring(3), "3");
         Iterator<Map.Entry<Test, String>> iterator = map1.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<Test, String> next = iterator.next();

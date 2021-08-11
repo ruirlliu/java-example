@@ -1,7 +1,7 @@
 package com;
 
 import example.DemoApplication;
-import example.framework.mybatis.dao.TestDao;
+import example.framework.mybatis.dao.HumanDao;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
@@ -47,7 +47,7 @@ public class BeanTest {
         Map<String, MapperScannerConfigurer> type = context.getBeansOfType(MapperScannerConfigurer.class);
         System.out.println(type.keySet());
 
-        TestDao bean = context.getBean(TestDao.class);
+        HumanDao bean = context.getBean(HumanDao.class);
         System.out.println(bean.toString());
     }
 

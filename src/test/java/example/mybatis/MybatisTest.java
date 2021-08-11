@@ -1,7 +1,7 @@
 package example.mybatis;
 
 import example.DemoApplication;
-import example.framework.mybatis.dao.TestDao;
+import example.framework.mybatis.dao.HumanDao;
 import example.framework.mybatis.entity.Human;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 public class MybatisTest {
 
     @Autowired
-    private TestDao dao;
+    private HumanDao dao;
 
     @Test
     public void test() throws InterruptedException {
