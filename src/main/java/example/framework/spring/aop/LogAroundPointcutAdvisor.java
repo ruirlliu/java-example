@@ -20,12 +20,8 @@ import org.springframework.stereotype.Component;
 public class LogAroundPointcutAdvisor extends AbstractPointcutAdvisor {
 
 
-
-	public LogAroundPointcutAdvisor() {}
-
 	@Override
 	public Pointcut getPointcut() {
-//		return new AnnotationMatchingPointcut(annotationType);
 		return new LogAroundPointcut();
 	}
 
@@ -38,7 +34,6 @@ public class LogAroundPointcutAdvisor extends AbstractPointcutAdvisor {
 	public boolean isPerInstance() {
 		return false;
 	}
-
 
 
 }

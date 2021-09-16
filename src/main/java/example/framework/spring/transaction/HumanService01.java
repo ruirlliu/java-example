@@ -3,6 +3,7 @@ package example.framework.spring.transaction;
 import example.framework.mybatis.dao.HumanDao;
 import example.framework.mybatis.entity.Human;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.Ordered;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,7 +18,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2021/8/11 16:53
  */
 @Service
-public class HumanService01 {
+public class HumanService01  {
 
 	@Autowired
 	private HumanDao humanDao;
@@ -40,7 +41,7 @@ public class HumanService01 {
 		return true;
 	}
 
-	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
+	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, timeoutString = "${spring.transaction.custom-time-out}", value = "tm")
 	public void update() throws Exception {
 		Human zhangsan = new Human();
 		zhangsan.setId(1);
@@ -55,7 +56,6 @@ public class HumanService01 {
 		}
 		throw new Exception("事务回滚");
 	}
-
 
 
 }

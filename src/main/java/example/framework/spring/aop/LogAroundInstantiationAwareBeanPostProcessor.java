@@ -1,7 +1,9 @@
 package example.framework.spring.aop;
 
+import example.framework.spring.aop.test.AopDemo;
 import example.framework.spring.aop.test.AopDemo1;
 import example.framework.spring.aop.test.AopDemo2;
+import example.framework.spring.aop.test.IAopDemo;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.BeanUtils;
@@ -51,5 +53,17 @@ public class LogAroundInstantiationAwareBeanPostProcessor implements Instantiati
 	public static void main(String[] args) {
 		boolean b1 = AopUtils.canApply(new LogAroundPointcutAdvisor(), AopDemo1.class);
 		boolean b2 = AopUtils.canApply(new LogAroundPointcutAdvisor(), AopDemo2.class);
+
+
+		final ProxyFactory proxyFactory = new ProxyFactory();
+		proxyFactory.addAdvisor(new LogAroundPointcutAdvisor());
+
+		Object instance = BeanUtils.instantiateClass(AopDemo.class);
+		proxyFactory.setTarget(instance);
+		proxyFactory.setInterfaces(IAopDemo.class);
+		Object proxy = proxyFactory.getProxy();
+		System.out.println(proxyFactory.toProxyConfigString());
+		System.out.println(proxyFactory.toString());
+		System.out.println(proxy.getClass().getName());
 	}
 }

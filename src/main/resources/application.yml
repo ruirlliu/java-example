@@ -3,6 +3,8 @@ server:
 #  servlet:
 #    context-path: /test
 spring:
+  transaction:
+    custom-time-out: 1000 # 通过配置设定超时时间
   application:
     name: demo-application
   redis:
@@ -38,6 +40,8 @@ spring:
     multipart:
       max-file-size: 1024MB
       max-request-size: 1024MB
+  aop:
+    proxy-target-class: false
 
 #  profiles:
 #    active: test
