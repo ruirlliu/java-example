@@ -1,7 +1,5 @@
 package example.jdk;
 
-import sun.misc.VM;
-
 import java.util.HashMap;
 
 /**
@@ -14,10 +12,10 @@ public class UnsafeTest {
     public static void main(String[] args) {
         ClassLoader classLoader = UnsafeTest.class.getClassLoader();
         System.out.println(classLoader);
-        System.out.println(VM.isSystemDomainLoader(classLoader));
+//        System.out.println(VM.isSystemDomainLoader(classLoader));
         ClassLoader classLoader1 = HashMap.class.getClassLoader();
         System.out.println(classLoader1);
-        System.out.println(VM.isSystemDomainLoader(classLoader1));
+//        System.out.println(VM.isSystemDomainLoader(classLoader1));
 
         System.out.println(Thread.currentThread().toString());
         Thread.dumpStack();

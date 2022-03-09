@@ -9,4 +9,10 @@ public class MyHello implements IHello {
     public String say() {
         return "Hello World!";
     }
+
+    @Override
+    public String originSay() {
+        System.out.println(" this say :: " + say());
+        return "Origin Hello World!";
+    }
 }

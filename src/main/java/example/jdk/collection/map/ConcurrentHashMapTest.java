@@ -1,4 +1,4 @@
-package example.jdk.map;
+package example.jdk.collection.map;
 
 import java.util.concurrent.ConcurrentHashMap;
 

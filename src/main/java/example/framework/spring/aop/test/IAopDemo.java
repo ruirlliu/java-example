@@ -1,8 +1,3 @@
-/**
- * 版权申明: 苏州朗动科技有限公司<br>
- * 项目描述: 企查查云聚接口平台
- */
-
 package example.framework.spring.aop.test;
 
 import example.framework.spring.aop.LogAround;

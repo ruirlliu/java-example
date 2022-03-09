@@ -1,5 +1,7 @@
 package example.jdk.map;
 
+import example.jdk.collection.map.HashMap_1_7;
+
 import java.util.HashMap;
 
 /**

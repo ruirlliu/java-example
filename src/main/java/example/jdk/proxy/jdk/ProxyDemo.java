@@ -8,8 +8,10 @@ public class ProxyDemo {
 
     public static void main(String[] args) {
         IHello proxy = (IHello) JdkProxyFactory.getProxy(new MyHello());
-        String say = proxy.say();
-        System.out.println(say);
+        System.out.println(proxy.say());
+
+        System.out.println(proxy.originSay());
+
         System.out.println(proxy.getClass());
         System.out.println("******************");
         IHello proxy1 = JdkProxyFactory.getProxyUsingInterface(IHello.class);

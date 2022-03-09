@@ -22,8 +22,10 @@ public class HelloInvocationHandler implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        // 自定义操作；
-        System.out.println("准备喊出：");
+        if (method.getName().equals("say")) {
+            // 自定义操作；
+            System.out.println("准备喊出：");
+        }
         Object result = method.invoke(subject, args);
         return result;
     }

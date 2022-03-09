@@ -6,4 +6,6 @@ package example.jdk.proxy.jdk;
  */
 public interface IHello {
     String say();
+
+    String originSay();
 }

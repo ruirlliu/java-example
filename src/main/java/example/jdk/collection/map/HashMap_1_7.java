@@ -1,4 +1,4 @@
-package example.jdk.map;
+package example.jdk.collection.map;
 
 /*
  * Copyright (c) 1997, 2010, Oracle and/or its affiliates. All rights reserved.
