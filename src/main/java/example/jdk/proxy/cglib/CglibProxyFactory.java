@@ -1,6 +1,6 @@
 package example.jdk.proxy.cglib;
 
-import net.sf.cglib.proxy.Enhancer;
+import org.springframework.cglib.proxy.Enhancer;
 
 /**
  * @author lr
