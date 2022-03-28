@@ -1,10 +1,11 @@
 package example.framework.mybatis.ognl;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Lists;
 import org.apache.ibatis.scripting.xmltags.ExpressionEvaluator;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 描述: 测试mybatis动态SQL<br>
@@ -20,10 +21,11 @@ public class ExpressionEvaluatorDemo {
 
 	public static void main(String[] args) {
 		ExpressionEvaluatorDemo demo = new ExpressionEvaluatorDemo();
-		ImmutableMap<String, ArrayList<String>> types = ImmutableMap.of("types", Lists.newArrayList("1", "2"));
-		boolean size = demo.testIf("types != null and types.size > 0", types);
+		Map<String, List<String>> params = new HashMap<>(8);
+		params.put("types", Arrays.asList("1", "2"));
+		boolean size = demo.testIf("types != null and types.size > 0", params);
 		System.out.println("testIf :: " + size);
-		boolean contains = demo.testIf("types != null and types.contains('1'.toString) > 0", types);
+		boolean contains = demo.testIf("types != null and types.contains('1'.toString) > 0", params);
 		System.out.println("testIf :: " + contains);
 	}
 

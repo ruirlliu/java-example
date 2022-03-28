@@ -1,14 +1,13 @@
 package example.framework.spring.upload;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-
+import java.nio.file.Files;
 
 @Service
 @Slf4j
@@ -48,7 +47,7 @@ public class BaseFileServiceImpl implements BaseFileService {
             accessConfFile.write(Byte.MAX_VALUE);
 
             //completeList 检查是否全部完成,如果数组里是否全部都是(全部分片都成功上传)
-            byte[] completeList = FileUtils.readFileToByteArray(confFile);
+            byte[] completeList = Files.readAllBytes(confFile.toPath());
             byte isComplete = Byte.MAX_VALUE;
             for (int i = 0; i < completeList.length && isComplete == Byte.MAX_VALUE; i++) {
                 //与运算, 如果有部分没有完成则 isComplete 不是 Byte.MAX_VALUE

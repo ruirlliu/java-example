@@ -3,10 +3,7 @@ package example.framework.spring.aop;
 import com.alibaba.fastjson.JSONObject;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
-import org.springframework.aop.MethodBeforeAdvice;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import java.lang.reflect.Method;
 
 /**
@@ -19,9 +16,9 @@ import java.lang.reflect.Method;
  */
 public class LogAroundInterceptor implements MethodInterceptor {
 
-	@Nullable
+
 	@Override
-	public Object invoke(@Nonnull MethodInvocation invocation) throws Throwable {
+	public Object invoke( MethodInvocation invocation) throws Throwable {
 		System.out.println("before method invoke log....");
 		Method method = invocation.getMethod();
 		Object[] args = invocation.getArguments();

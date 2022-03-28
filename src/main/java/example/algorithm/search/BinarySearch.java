@@ -60,7 +60,7 @@ public class BinarySearch {
 //		System.out.println(binarySearchIndex(list, 1, Comparator.naturalOrder()));
 //		System.out.println(binarySearchIndex(list, 2, Comparator.naturalOrder()));
 //		System.out.println(binarySearchIndex(list, 3, Comparator.naturalOrder()));
-		System.out.println(binarySearchIndex(list, 4, Comparator.naturalOrder()));
+//		System.out.println(binarySearchIndex(list, 4, Comparator.naturalOrder()));
 		System.out.println(findInsertionPoint(list, 4, Comparator.naturalOrder()));
 //		System.out.println(binarySearchIndex(list, 5, Comparator.naturalOrder()));
 //		System.out.println(binarySearchIndex(list, 6, Comparator.naturalOrder()));
