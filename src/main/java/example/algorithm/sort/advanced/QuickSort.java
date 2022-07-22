@@ -19,7 +19,6 @@ public class QuickSort {
 	public static void doSort(int[] a, int low, int high) {
 		if (low <= high) {
 			int key = partition(a, low, high);
-			System.out.println(Arrays.toString(a));
 			doSort(a, low, key - 1);
 			doSort(a, key + 1, high);
 		}
