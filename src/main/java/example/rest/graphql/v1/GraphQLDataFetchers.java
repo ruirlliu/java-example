@@ -1,8 +1,8 @@
 package example.rest.graphql.v1;
 
-import com.alibaba.fastjson.JSON;
-import example.rest.graphql.v1.entiry.Book;
 import com.google.common.collect.ImmutableMap;
+import example.rest.graphql.v1.entiry.Book;
+import example.utils.JsonUtils;
 import graphql.schema.DataFetcher;
 
 import java.util.Arrays;
@@ -44,7 +44,7 @@ public class GraphQLDataFetchers {
     public DataFetcher getAllBooks() {
         return environment -> {
             Map<String, Object> arguments = environment.getArgument("book");
-            Book book = JSON.parseObject(JSON.toJSONString(arguments), Book.class);
+            Book book = JsonUtils.toJson(JsonUtils.toJsonStr(arguments), Book.class);
             return books;
         };
     }

@@ -1,8 +1,8 @@
 package example.jdk.cache.lru;
 
-import com.alibaba.fastjson.JSONObject;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import example.utils.JsonUtils;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -24,7 +24,7 @@ class LRUTest {
         map.put("test03", 3);
 
         ObjectMapper mapper = new ObjectMapper();
-        Map<Object, Object> map1 = mapper.readValue(JSONObject.toJSONString(map), Map.class);
+        Map<Object, Object> map1 = JsonUtils.toJson(JsonUtils.toJsonStr(map), Map.class);
 
         System.out.println(map1);
 

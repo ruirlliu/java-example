@@ -1,10 +1,11 @@
 package example.framework.spring.aop;
 
-import com.alibaba.fastjson.JSONObject;
+import example.utils.JsonUtils;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -12,8 +13,8 @@ import java.util.Set;
 public class ResolveUtils {
 
 	@SuppressWarnings("rawtypes,unchecked")
-	public static JSONObject parameterAttribute(Object[] args, Method method) {
-		JSONObject attribute = new JSONObject((int) (args.length / 0.75f) + 1, true);
+	public static Map<String, Object> parameterAttribute(Object[] args, Method method) {
+		Map<String, Object> attribute = new LinkedHashMap<>((int) (args.length / 0.75f) + 1);
 		String[] parasName = Arrays.stream(method.getParameters()).map(Parameter::getName).toArray(String[]::new);
 		//				attributeCache.computeIfAbsent(new MethodClassKey(method, targetClass),
 		//				k -> Arrays.stream(method.getParameters()).map(Parameter::getName).toArray(String[]::new));
@@ -28,8 +29,9 @@ public class ResolveUtils {
 					attribute.put(entry.getKey().toString(), entry.getValue());
 				}
 			} else {
-				JSONObject jsonObject = JSONObject.parseObject(JSONObject.toJSONString(args[i]));
-				attribute.putAll(jsonObject);
+				String jsonStr = JsonUtils.toJsonStr(args[i]);
+				Map<String, Object> arg = JsonUtils.toJson(jsonStr, Map.class);
+				attribute.putAll(arg);
 			}
 		}
 		return attribute;

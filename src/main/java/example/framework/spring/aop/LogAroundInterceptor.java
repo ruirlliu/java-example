@@ -1,10 +1,10 @@
 package example.framework.spring.aop;
 
-import com.alibaba.fastjson.JSONObject;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
 import java.lang.reflect.Method;
+import java.util.Map;
 
 /**
  *
@@ -25,8 +25,8 @@ public class LogAroundInterceptor implements MethodInterceptor {
 		Object target = invocation.getThis();
 		Object invoke = method.invoke(target, args);
 		System.out.println("after method invoke log....");
-		JSONObject jsonObject = ResolveUtils.parameterAttribute(args, method);
-		System.out.println(jsonObject.toJSONString());
+		Map<String, Object> map = ResolveUtils.parameterAttribute(args, method);
+		System.out.println(map);
 		return invoke;
 	}
 }
