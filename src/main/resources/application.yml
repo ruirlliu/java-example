@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8080
 #  servlet:
 #    context-path: /test
 spring:
@@ -39,31 +39,6 @@ mybatis:
   lazy-initialization: false
   mapper-default-scope:
 
-
-
-# dubbo
-dubbo:
-  # The default value of dubbo.application.name is ${spring.application.name}
-  application:
-    name: ${spring.application.name}
-  scan:
-    # dubbo服务发布者所在的包、   dubbo服务调用者所在的包
-    base-packages: example.rpc.dubbo.test02.service
-  registry:
-    address: 127.0.0.1  # zookeeper注册中心的地址 N/A
-    port: 2181          # zookeeper注册中心的端口
-  # 服务发布者增加信息
-  protocol:
-    name: dubbo
-    port: 12345
-#    serialization:
-  provider:
-    retries: 0          # 服务调用重试次数，服务发布者不给重试，让服务调用者自己重试
-  # 服务调用者增加
-  consumer:
-    timeout: 1000
-    check: true         # 服务启动时检查被调用服务是否可用
-    retries: 2          # 服务调用重试次数
 
 management:
   endpoint:

@@ -26,7 +26,7 @@ public class MyBloomFilter2 {
     /**
      * 初始化布隆过滤器的 bitmap
      */
-    private static BitSet bitset = new BitSet(DEFAULT_SIZE);
+    private static final BitSet bitset = new BitSet(DEFAULT_SIZE);
 
     /**
      * 添加数据
@@ -80,7 +80,7 @@ public class MyBloomFilter2 {
         add(id);
 
         System.out.println(contains(id));   // true
-        System.out.println("" + contains("234567890"));  //false
+        System.out.println(contains("234567890"));  //false
     }
 
     static class HashFunction {

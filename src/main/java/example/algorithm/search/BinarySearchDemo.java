@@ -9,10 +9,16 @@ public class BinarySearchDemo {
 		int i = Arrays.binarySearch(nums, 6);
 		System.out.println(i);
 
-		int[] bound = new BinarySearchDemo().bound(new int[] { 5, 7, 7, 8, 8, 10 }, 8);
+		int[] bound = new BinarySearchDemo().bound(new int[] { 5, 7, 7, 8, 8,8, 8, 10 }, 8);
 		System.out.println(Arrays.toString(bound));
 	}
 
+	/**
+	 * 二分查找，当遇到重复时，返回最左/右角标的元素
+	 * @param nums
+	 * @param target
+	 * @return
+	 */
 	public int[] bound(int[] nums, int target) {
 		int[] res = new int[2];
 		int low = 0;

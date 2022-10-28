@@ -13,11 +13,11 @@ public class BitSetDemo {
         BitSet bitSet = new BitSet(10);
         Random random = new Random();
         for (int i = 0; i < 10000; i++) {
-            bitSet.set(random.nextInt(9999999));
+            bitSet.set(random.nextInt(9999));
         }
         for (int i = 0; i< bitSet.size(); i++) {
             if (bitSet.get(i)) {
-                System.out.print(i + " ");
+                System.out.print(i);
             }
         }
     }
